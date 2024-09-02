@@ -5,6 +5,7 @@
 #ifndef CPRT_DEF_H
 #define CPRT_DEF_H
 
+#define FUNC_ASSERT(...)
 #define __CPRTNAME__(s) CPrt ## s
 
 typedef enum CPrtStyle {
@@ -40,11 +41,6 @@ typedef enum CPrtBackColorStyle {
     __CPRTNAME__(BackCyan),
     __CPRTNAME__(BackWhite)
 }CPrtBackColorStyle;
-
-typedef struct CPrtStyleBuffer {
-    size_t _style_offset;
-    char _buf[16];
-}CPrtStyleBuffer;
 
 #undef __NAME
 
